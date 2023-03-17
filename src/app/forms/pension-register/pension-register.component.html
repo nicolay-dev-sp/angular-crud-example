@@ -1,0 +1,30 @@
+<div class="container">
+  <span class="header-title">
+    <h1>Afiliar Persona</h1>
+  </span>
+  <div class="form-pension-register input-group">
+    <div class="input-row">
+      <label class="input-group-text margin-x" for="doc-type">Tipo de Documento</label>
+      <select class="form-select drowdown-doc margin-x" id="inputGroupSelect01">
+        <option selected value="C.C">C.C</option>
+        <option value="T.T">T.I</option>
+        <option value="C.E">C.E</option>
+      </select>
+      <input type="text" class="form-control margin-x" placeholder="Número de Documento">
+    </div>
+    <div class="input-row">
+      <input type="text" class="form-control margin-x" placeholder="Nombres">
+      <input type="text" class="form-control margin-x" placeholder="Apellidos">
+    </div>
+
+    <div class="input-row">
+      <button type="button" class="btn btn-primary" (click)="showCalendar = !showCalendar">Fecha de Nacimiento</button>
+    </div>
+    <div class="input-row">
+      <ngb-datepicker *ngIf="showCalendar" #dp (navigate)="date = $event.next"></ngb-datepicker>
+    </div>
+    <select class="form-select drowdown-gender margin-x" id="genero">
+      <option selected value="C.C">Masculino</option>
+      <option value="T.T">Femenino</option>
+    </select>
+  </div>
